@@ -42,8 +42,10 @@
         <!-- Optionally reference your vis JS file here, or define in a script tag -->
         <!-- <script type="text/javascript" src="js/my-vis.js"></script> -->
         <script type="text/javascript">
+           console.log('step1###')
+           // console.log(data)
 
-            d3.csv('./movie.csv', function loadCallback(error, data) {
+            d3.csv('./input/movie.csv', function loadCallback(error, data) {
               
 
                 data.forEach(function(d) { // convert strings to numbers
@@ -52,7 +54,7 @@
                 });
                 makeVis(data);
             });
-
+            console.log('step2')
           var makeVis = function(data) {
               // Common pattern for defining vis size and margins
               var margin = { top: 20, right: 20, bottom: 30, left: 40 },
